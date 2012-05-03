@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Scoot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  
+    <script type="text/javascript">
+    <!--
+    Format = function (expr,decplaces) {
+      var str = "" + Math.round(eval(expr)*Math.pow(10,decplaces));
+      while(str.length <= decplaces) {
+        str = "0" + str;
+      }
+      var decpoint = str.length - decplaces;
+      return str.substring(0,decpoint) + "." + str.substring(decpoint,str.length);
+    }
+    centesimalTime= function () {
+      d = new Date();
+      msnow = d.getTime();
+      utcmidnight=new Date(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate(),0,0,0);
+      utcnow=new Date(d.getUTCFullYear(),d.getUTCMonth(),d.getUTCDate(),d.getUTCHours(),d.getUTCMinutes(),d.getUTCSeconds());
+      t = d.getUTCHours()*60*60+ d.getUTCMinutes()*60 + d.getUTCSeconds()+d.getUTCMilliseconds()/1000.0;
+      document.getElementById("centesimaltime").innerHTML= Format(t*100.0/(60*60*24),3);
+    }
+    window.setInterval(centesimalTime,100);
+    -->
+      </script>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Centesimal Time</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Centesimal Time</h1>
+        <div>&nbsp;</div>
+        <div id="centesimaltime" style="float:right;font-size:100px;font-weight:bold"></div>
+        <p><a class="btn btn-primary btn-large" href="#intro">Learn more &raquo;</a></p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <a name="intro"></a>
+          <h2>Introduction</h2>
+           <p>
+I propose the scrapping of Daylight Savings Time and replacing it with a new measure of time altogether - Centesimal Time. The day is divided into 100 "cents" instead of 24 hours. Midnight is 0 cents and midday is 50 cents. Time is expressed as decimal number between 0 and 100. The number of decimal places shown depends on the precision required.
+           </p>
+        </div>
+        <div class="span4">
+          <h2>Demo</h2>
+To demonstrate it, I've created a centesimal clock. It's really simple. Demand that your local garage/doctors/library start arranging appointments in centesimal time and we'll soon have everyone coming round to my way of thinking. Think about it; at the moment if you have to calculate "how long is it before 19:32:59" you have to really think about it. In centesimal, you just subtract one number from another. Really simple. </p>
+       </div>
+        <div class="span4">
+          <h2>Timezones</h2>
+          <p>While we're at it, we'll abolish time zones and base centesimal time around the Coordinated Univeral Time (UTC) system which is equivalent to the UK's GMT, rather conveniently. So everyone's midday (50 cents in the UK) will be different around the globe. That's got to be better than remembering the time zones at various longitudes.
+
+          So that's sorted then. By the way, there's a one-off special of the Royle Family on television tonight on BBC1 at 87.5 cents. I'm looking forward to it. It's on for 4.16 cents too.</p>
+        </div>
+      </div>
+            <hr>
+
+            <footer>
+              <p>&copy; Company 2012</p>
+            </footer>
+
+
+          </div> <!-- /container -->
+
+        </body>
+      </html>
